@@ -1,0 +1,91 @@
+/* Reset default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f8fc;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #0066cc;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li, nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li:hover, nav ul li a:hover {
+    color: #ffcc00;
+    cursor: pointer;
+}
+
+/* Main content */
+main {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    margin-bottom: 20px;
+    color: #004080;
+    text-align: center;
+}
+
+/* Form styling */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+form input[type="radio"] {
+    margin-right: 5px;
+}
+
+form label[for="laki-laki"],
+form label[for="perempuan"] {
+    font-weight: normal;
+    margin-right: 15px;
+}

@@ -1,0 +1,118 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Warna dasar dan font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #004d99;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigasi */
+nav {
+    background-color: #007acc;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Konten utama */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+main article {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+main article img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+/* Paragraf ajakan */
+main > p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #004d99;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer img {
+    width: 24px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main article {
+        width: 90%;
+    }
+}
