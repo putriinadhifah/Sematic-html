@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIMSUM NT</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- My Style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar start -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">Dimsum<span>NT</span>.</a>
+
+    <div class="navbar-nav">
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang</a>
+      <a href="#products">Menu</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#" id="search-button"><i data-feather="search"></i></a>
+      <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+
+    <!-- Search Form start -->
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search here...">
+      <label for="search-box"><i data-feather="search"></i></label>
+    </div>
+    <!-- Search Form end -->
+
+    <!-- Shopping Cart start -->
+    <div class="shopping-cart">
+      <div class="cart-item">
+        <img src="img/products/1.jpg" alt="Product 1">
+        <div class="item-detail">
+          <h3>Siomay</h3>
+          <div class="item-price">IDR 12K</div>
+        </div>
+        <i data-feather="trash-2" class="remove-item"></i>
+      </div>
+      <div class="cart-item">
+        <img src="img/products/2.jpg" alt="Product 1">
+        <div class="item-detail">
+          <h3>Wonton</h3>
+          <div class="item-price">IDR 15K</div>
+        </div>
+        <i data-feather="trash-2" class="remove-item"></i>
+      </div>
+      <div class="cart-item">
+        <img src="img/products/5.jpg" alt="Product 1">
+        <div class="item-detail">
+          <h3>FengZhua</h3>
+          <div class="item-price">IDR 20K</div>
+        </div>
+        <i data-feather="trash-2" class="remove-item"></i>
+      </div>
+    </div>
+    <!-- Shopping Cart end -->
+
+  </nav>
+  <!-- Navbar end -->
+
+  <!-- Hero Section start -->
+  <section class="hero" id="home">
+    <main class="content">
+      <h1>Dimsum<span> NT</span> time!</h1>
+      <p>Datang ke toko atau delivery, yuk!</p>
+      <a href="#products" class="cta">Beli Sekarang</a>
+    </main>
+  </section>
+  <!-- Hero Section end -->
+
+  <!-- About Section start -->
+  <section id="about" class="about">
+    <h2><span>Tentang</span> Kami</h2>
+
+    <div class="row">
+      <div class="about-img">
+        <img src="img/tentang-kami.jpg" alt="Tentang Kami">
+      </div>
+      <div class="content">
+        <h3>Kenapa Harus Coba Dimsum Kami?</h3>
+        <p>Dimsum Kami terbuat dari bahan-bahan alami seperti daging ayam, udang, sayuran, dan tepung terigu, yang kemudian dibentuk menjadi berbagai jenis dumpling yang lezat dan menggugah selera. Proses pembuatannya pun sangat teliti, mulai dari pemilihan bahan hingga proses pengukusan atau penggorengan, sehingga menghasilkan rasa yang autentik dan tekstur yang lembut.</p>
+        <p>Buka setiap hari: 10.00 - 22.00 WIB.</p>
+        <p>Lokasi di Jl. Raya Dimsum No. 123, pekalongan.</p>
+      </div>
+    </div>
+  </section>
+  <!-- About Section end -->
+
+  <!-- Menu Section start -->
+  <section class="products" id="products">
+    <h2><span>Menu</span> Kami</h2>
+    <p>Temukan Menu Favorit Anda!</p>
+
+    <div class="row">
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-siomaya"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/products/1.jpg" alt="Product 1">
+        </div>
+        <div class="product-content">
+          <h3>siomay</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 12K</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-wontona"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/products/2.jpg" alt="Product 1">
+        </div>
+        <div class="product-content">
+          <h3>Wonton</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 15K</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-baozia"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/products/3.jpg" alt="Product 1">
+        </div>
+        <div class="product-content">
+          <h3>Baozi</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            
+          </div>
+          <div class="product-price">IDR 16K</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-cheonga"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/products/4.jpg" alt="Product 1">
+        </div>
+        <div class="product-content">
+          <h3>Cheong Fun</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            
+          </div>
+          <div class="product-price">IDR 18K</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-fengzhuaa"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/products/5.jpg" alt="Product 1">
+        </div>
+        <div class="product-content">
+          <h3>FengZhua</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            
+          </div>
+          <div class="product-price">IDR 20K</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-sushia"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/products/6.jpeg" alt="Product 1">
+        </div>
+        <div class="product-content">
+          <h3>Sushi</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            
+          </div>
+          <div class="product-price">IDR 25K</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Menu Section end -->
+
+  <!-- Contact Section start -->
+  <section id="contact" class="contact">
+    <h2><span>Kontak</span> Kami</h2>
+    <p>Ada Pertanyaan? Hubungi Kami!
+
+    </p>
+
+    <div class="row">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63375.28613868737!2d109.63330359152016!3d-6.895940234333682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70242ca490fe13%3A0xc0c68a126b258cb6!2sPekalongan%2C%20Pekalongan%20City%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1749253787157!5m2!1sen!2sid"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+      <form action="">
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <input type="text" placeholder="nama">
+        </div>
+        <div class="input-group">
+          <i data-feather="mail"></i>
+          <input type="text" placeholder="email">
+        </div>
+        <div class="input-group">
+          <i data-feather="phone"></i>
+          <input type="text" placeholder="no hp">
+        </div>
+        <button type="submit" class="btn">kirim pesan</button>
+      </form>
+
+    </div>
+  </section>
+  <!-- Contact Section end -->
+
+  <!-- Footer start -->
+  <footer>
+    <div class="socials">
+      <a href="#"><i data-feather="instagram"></i></a>
+      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang</a>
+      <a href="#products">Menu</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">sandhikagalih</a>. | &copy; 2023.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Modal Box Item Detail start -->
+  <div class="siomay" id="item-detail-siomay">
+    <div class="siomay-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="siomay-content">
+        <img src="img/products/1.jpg" alt="Product 1">
+        <div class="product-content">
+          <h3>Siomay</h3>
+          <p>Terdiri dari campuran ikan/daging, dikukus, dan disajikan dengan saus kacang.</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 12K</div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wonton" id="item-detail-wonton">
+    <div class="wonton-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="wonton-content">
+        <img src="img/products/2.jpg" alt="Product 1">
+        <div class="product-content">
+          <h3>Wonton</h3>
+          <p>Terdiri dari adonan tipis berisi daging cincang, disajikan kuah atau goreng.</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 12K</div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="baozi" id="item-detail-baozi">
+    <div class="baozi-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="baozi-content">
+        <img src="img/products/3.jpg" alt="Product 1">
+        <div class="product-content">
+          <h3>Baozi</h3>
+          <p>Terdiri dari isian daging, kacang merah, atau cokelat.</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 16K</div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cheong" id="item-detail-cheong">
+    <div class="cheong-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="cheong-content">
+        <img src="img/products/4.jpg" alt="Product 1">
+        <div class="product-content">
+          <h3>CheongFun</h3>
+          <p>Terdiri dari lembaran adonan beras tipis yang digulung dan diisi dengan berbagai isian, seperti udang, daging, atau sayuran.</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 18K</div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fengzhua" id="item-detail-fengzhua">
+    <div class="fengzhua-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="fengzhua-content">
+        <img src="img/products/5.jpg" alt="Product 1">
+        <div class="product-content">
+          <h3>Fengzhua</h3>
+          <p>Terdiri dari kaki ayam yang dimasak dengan saus khas yang kaya rempah-rempah dan bumbu.</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 20K</div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sushi" id="item-detail-sushi">
+    <div class="sushi-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="sushi-content">
+        <img src="img/products/6.jpeg" alt="Product 1">
+        <div class="product-content">
+          <h3>Sushi</h3>
+          <p>Terdiri dari nasi yang dibentuk dengan topping ikan segar, sayuran, dan wasabi sebagai pelengkap rasa.</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <div class="product-price">IDR 25K</div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Box Item Detail end -->
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace()
+  </script>
+
+  <!-- My Javascript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

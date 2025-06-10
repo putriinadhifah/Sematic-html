@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manajemen Stok Toko Hijab</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fefefe;
+      padding: 40px;
+      margin: 0;
+      background: linear-gradient(to right, #f9f9f9, #f0f0f0);
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a4a4a;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      padding: 10px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+      border-color: #8e44ad;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #8e44ad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #732d91;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #8e44ad;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistem Informasi Stok Toko Hijab</h1>
+
+  <form id="productForm">
+    <input type="text" id="nama" placeholder="Nama Produk" required>
+    <input type="text" id="kategori" placeholder="Kategori" required>
+    <input type="number" id="harga" placeholder="Harga" required>
+    <input type="number" id="stok" placeholder="Stok" required>
+    <button type="submit">Tambah Produk</button>
+  </form>
+
+  <table id="produkTable">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Kategori</th>
+        <th>Harga</th>
+        <th>Stok</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    let produkList = [];
+
+    const form = document.getElementById('productForm');
+    const tableBody = document.querySelector('#produkTable tbody');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const kategori = document.getElementById('kategori').value;
+      const harga = document.getElementById('harga').value;
+      const stok = document.getElementById('stok').value;
+
+      produkList.push({ nama, kategori, harga, stok });
+      form.reset();
+      renderTable();
+    });
+
+    function renderTable() {
+      tableBody.innerHTML = '';
+      produkList.forEach((produk, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${produk.nama}</td>
+          <td>${produk.kategori}</td>
+          <td>Rp ${produk.harga}</td>
+          <td>${produk.stok}</td>
+          <td><button onclick="kurangiStok(${index})">Kurangi Stok</button></td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    function kurangiStok(index) {
+      if (produkList[index].stok > 0) {
+        produkList[index].stok--;
+        renderTable();
+      } else {
+        alert('Stok habis!');
+      }
+    }
+  </script>
+</body>
+</html>
