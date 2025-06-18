@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Nilai Mahasiswa</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Hasil Nilai Mahasiswa</h2>
+<div id="output"></div>
+
+<script>
+   
+    function hitungNilaiAkhir(tugas, uts, uas) {
+        return (tugas * 0.3) + (uts * 0.3) + (uas * 0.4);
+    }
+
+
+    function tentukanGrade(nilaiAkhir) {
+        if (nilaiAkhir >= 85) {
+            return 'A';
+        } else if (nilaiAkhir >= 75) {
+            return 'B';
+        } else if (nilaiAkhir >= 65) {
+            return 'C';
+        } else if (nilaiAkhir >= 50) {
+            return 'D';
+        } else {
+            return 'E';
+        }
+    }
+
+    let jumlahMahasiswa = parseInt(prompt("Masukkan jumlah mahasiswa:"));
+    let dataMahasiswa = [];
+
+    for (let i = 0; i < jumlahMahasiswa; i++) {
+        let nama = prompt(`Masukkan nama mahasiswa ke-${i + 1}:`);
+        let tugas = parseFloat(prompt(`Masukkan nilai tugas ${nama}:`));
+        let uts = parseFloat(prompt(`Masukkan nilai UTS ${nama}:`));
+        let uas = parseFloat(prompt(`Masukkan nilai UAS ${nama}:`));
+
+        let nilaiAkhir = hitungNilaiAkhir(tugas, uts, uas);
+        let grade = tentukanGrade(nilaiAkhir);
+
+        dataMahasiswa.push({
+            nama: nama,
+            tugas: tugas,
+            uts: uts,
+            uas: uas,
+            nilaiAkhir: nilaiAkhir.toFixed(2),
+            grade: grade
+        });
+    }
+
+    let outputHTML = "<table>";
+    outputHTML += `
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Tugas</th>
+            <th>UTS</th>
+            <th>UAS</th>
+            <th>Nilai Akhir</th>
+            <th>Grade</th>
+        </tr>`;
+
+    for (let i = 0; i < dataMahasiswa.length; i++) {
+        outputHTML += `
+        <tr>
+            <td>${i + 1}</td>
+            <td>${dataMahasiswa[i].nama}</td>
+            <td>${dataMahasiswa[i].tugas}</td>
+            <td>${dataMahasiswa[i].uts}</td>
+            <td>${dataMahasiswa[i].uas}</td>
+            <td>${dataMahasiswa[i].nilaiAkhir}</td>
+            <td>${dataMahasiswa[i].grade}</td>
+        </tr>`;
+    }
+
+    outputHTML += "</table>";
+    document.getElementById("output").innerHTML = outputHTML;
+</script>
+
+</body>
+</html>

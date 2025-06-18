@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator Gaji</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      background: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Kalkulator Gaji Karyawan</a>
+    </div>
+  </nav>
+
+  <section class="container">
+    <form id="formGaji">
+      <div class="mb-3">
+        <label for="nama" class="form-label">Nama Karyawan</label>
+        <input type="text" class="form-control" id="nama" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="jabatan" class="form-label">Jabatan</label>
+        <select class="form-select" id="jabatan" required>
+          <option value="">Pilih Jabatan</option>
+          <option value="Manager">Manager</option>
+          <option value="Staff">Staff</option>
+          <option value="OB">Office Boy</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="gaji" class="form-label">Gaji Pokok (Rp)</label>
+        <input type="number" class="form-control" id="gaji" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="tunjangan" class="form-label">Tunjangan (Rp)</label>
+        <input type="number" class="form-control" id="tunjangan" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="potongan" class="form-label">Potongan (Rp)</label>
+        <input type="number" class="form-control" id="potongan" required>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Hitung Gaji</button>
+    </form>
+
+    <h3 class="mt-5">Data Gaji Karyawan</h3>
+    <table id="tabelGaji">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Jabatan</th>
+          <th>Gaji Pokok</th>
+          <th>Tunjangan</th>
+          <th>Potongan</th>
+          <th>Gaji Bersih</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script>
+    const form = document.getElementById('formGaji');
+    const tabelBody = document.querySelector('#tabelGaji tbody');
+    let counter = 1;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nama = document.getElementById('nama').value;
+      const jabatan = document.getElementById('jabatan').value;
+      const gajiPokok = parseFloat(document.getElementById('gaji').value);
+      const tunjangan = parseFloat(document.getElementById('tunjangan').value);
+      const potongan = parseFloat(document.getElementById('potongan').value);
+
+      const gajiBersih = gajiPokok + tunjangan - potongan;
+
+      const row = `
+        <tr>
+          <td>${counter++}</td>
+          <td>${nama}</td>
+          <td>${jabatan}</td>
+          <td>Rp ${gajiPokok.toLocaleString()}</td>
+          <td>Rp ${tunjangan.toLocaleString()}</td>
+          <td>Rp ${potongan.toLocaleString()}</td>
+          <td>Rp ${gajiBersih.toLocaleString()}</td>
+        </tr>
+      `;
+      tabelBody.insertAdjacentHTML('beforeend', row);
+      form.reset();
+    });
+  </script>
+</body>
+
+</html>
