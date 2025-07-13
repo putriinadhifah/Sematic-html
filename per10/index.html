@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN REACT 1. INSTALASI REACT -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- CDN BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    
+    <title>LATIHAN 1</title>
+</head>
+<body>
+    <!-- <div class="container"> 
+        <h1>Hello World!</h1>
+    </div> -->
+
+    <div class="container mt-5">
+        <!-- 2. MEMBUAT CONTAINER (WADAH) -->
+         <div id="app">
+
+         </div>
+    </div>
+
+    <!-- JAVASCRIPT REACT -->
+    <script type="text/babel">
+        // 3. MEMBUAT KOMPONEN
+        class Hello extends React.Component{
+          render () {
+            return <h1>Hello World, React!</h1>
+          }  
+        }
+
+        // 4. MELAKUKAN RENDER KE HALAMAN WEBSITE (CONTAINER)
+        ReactDOM.render(<Hello />, document.getElementById('app'));
+    </script>
+
+    <!-- JAVASCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>    
+</body>
+</html>
