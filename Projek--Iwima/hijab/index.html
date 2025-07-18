@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Manajemen Stok Toko Hijab</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #c06cb4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #c06cb4;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px #ccc;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #c06cb4;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f7f0f9;
+    }
+
+    .btn {
+      margin-top: 15px;
+      background-color: #c06cb4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #a84c9e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Manajemen Stok Produk Toko Hijab</h1>
+  </header>
+
+  <nav>
+    <a href="#">Data Stok</a>
+    <a href="#">Pembuatan Stok</a>
+    <a href="#">Keluar/Masuk</a>
+    <a href="#">Pegawai</a>
+    <a href="#">Laporan</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>📦 Data Stok Produk</h2>
+      <label>Nama Produk:</label>
+      <input type="text" placeholder="Contoh: Pashmina Ceruty">
+      <label>Jumlah Stok:</label>
+      <input type="number" placeholder="Contoh: 100">
+      <label>Kategori:</label>
+      <select>
+        <option>Hijab Segi Empat</option>
+        <option>Pashmina</option>
+        <option>Hijab Instan</option>
+      </select>
+      <button class="btn">Simpan</button>
+    </div>
+
+    <div class="section">
+      <h2>🧵 Proses Pembuatan Stok</h2>
+      <label>Bahan:</label>
+      <input type="text" placeholder="Contoh: Ceruty Babydoll">
+      <label>Jumlah Produksi:</label>
+      <input type="number" placeholder="Contoh: 50 pcs">
+      <label>Tanggal Produksi:</label>
+      <input type="date">
+      <button class="btn">Catat Produksi</button>
+    </div>
+
+    <div class="section">
+      <h2>🔁 Data Keluar & Masuk Stok</h2>
+      <label>Nama Produk:</label>
+      <input type="text">
+      <label>Jenis Transaksi:</label>
+      <select>
+        <option>Stok Masuk</option>
+        <option>Stok Keluar</option>
+      </select>
+      <label>Jumlah:</label>
+      <input type="number">
+      <label>Tanggal:</label>
+      <input type="date">
+      <button class="btn">Simpan Transaksi</button>
+    </div>
+
+    <div class="section">
+      <h2>👩‍💼 Data Pegawai</h2>
+      <label>Nama Pegawai:</label>
+      <input type="text">
+      <label>Jabatan:</label>
+      <input type="text">
+      <label>Kontak:</label>
+      <input type="text">
+      <button class="btn">Tambah Pegawai</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Jabatan</th>
+            <th>Kontak</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Putri Aulia</td>
+            <td>Admin Gudang</td>
+            <td>0812-xxxx-xxxx</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>📄 Laporan Stok</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Produk</th>
+            <th>Stok Awal</th>
+            <th>Masuk</th>
+            <th>Keluar</th>
+            <th>Stok Akhir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Pashmina Ceruty</td>
+            <td>100</td>
+            <td>20</td>
+            <td>10</td>
+            <td>110</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>
